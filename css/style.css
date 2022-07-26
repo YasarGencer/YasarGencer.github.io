@@ -489,7 +489,9 @@ header {
     font-size: var(--fs-h3);
 }
 .portfolio-item-individual img {
-    max-width: 800px;
+    max-width:100%;
+    max-height:100%;
+
 }
 
 .portfolio-item-buttons{
