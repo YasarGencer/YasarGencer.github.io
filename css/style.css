@@ -102,6 +102,8 @@ h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
 
+
+
 .section__title {
     margin-bottom: .25em;
 }
@@ -213,11 +215,6 @@ header {
 .nav-open .hamburger::after {
     opacity: 0;
 }
-
-
-
-
-
 
 .hamburger {
     display: block;
@@ -487,12 +484,11 @@ header {
     
     padding-top: 2em;
     padding-bottom: 2em;
-    max-width: 1500px;
     font-size: var(--fs-h3);
+    max-width: 90%;
 }
 .portfolio-item-individual img {
-    max-width:75%;
-    max-height:75%;
+    max-width:80%;
 
 }
 
