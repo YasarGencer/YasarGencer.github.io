@@ -485,11 +485,10 @@ header {
     padding-top: 2em;
     padding-bottom: 2em;
     font-size: var(--fs-h3);
-    max-width: 90%;
+    max-width: 85%;
 }
 .portfolio-item-individual img {
-    max-width:80%;
-
+    max-width: 85%;
 }
 
 .portfolio-item-buttons{
