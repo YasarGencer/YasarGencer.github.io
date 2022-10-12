@@ -13,11 +13,17 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-1: #dc9a00;
-    --clr-2: #4e3700;
-    --clr-accent-1: #dc9a00;
-    --clr-accent-2: #291d00;
-    
+    --clr-1: #c09f80;
+    --clr-2: #565656;
+    --clr-accent-1: #D7CEC7;
+    --clr-accent-2: #76323F;
+    /*
+    --clr-1: #EFEFEF;
+    --clr-2: #A9A9A9;
+    --clr-accent-1: #CAEBF2;
+    --clr-accent-2: #FF3B3F;
+    */
+
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
