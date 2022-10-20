@@ -27,6 +27,7 @@
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
+    --fs-h4: 0.85rem;
     --fs-body: 1rem;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
@@ -142,7 +143,7 @@ h3 { font-size: var(--fs-h3) }
 }
 .section__description{
     margin: 0;
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
 }
 .section__description--work{
     color: var(--clr-2);
