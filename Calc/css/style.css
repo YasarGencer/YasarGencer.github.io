@@ -84,3 +84,15 @@ body{
     background-color: inherit;
     color: inherit;
 }
+.calc-button:hover{
+    background-color: inherit;   
+}
+.calc-button:active{
+    background-color: #ffef78;
+}
+.double{
+    flex-basis: 47%;
+}
+.triple{
+    flex-basis: 74%;
+}
