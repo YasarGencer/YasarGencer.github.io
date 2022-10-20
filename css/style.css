@@ -126,9 +126,8 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle {
     margin: 0;
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h2);
 }
-
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent-2);
@@ -137,8 +136,15 @@ h3 { font-size: var(--fs-h3) }
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
-
 .section__subtitle--work {
+    color: var(--clr-accent-2);
+    font-weight: var(--fw-bold);
+}
+.section__description{
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+.section__description--work{
     color: var(--clr-2);
     font-weight: var(--fw-bold);
 }
