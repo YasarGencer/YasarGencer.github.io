@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-
+/* Custom Properties, update these for your own design */
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
@@ -23,11 +23,10 @@
     --clr-accent-1: #CAEBF2;
     --clr-accent-2: #FF3B3F;
     */
-
+    
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
-    --fs-h4: 0.85rem;
     --fs-body: 1rem;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
@@ -42,7 +41,6 @@
         --fs-body: 1.125rem;
     }
 }
-
 /* General styles */
 
 html {
@@ -51,12 +49,11 @@ html {
 
 body {
     background: var(--clr-2);
-    color: var(--clr-1);    
+    color: var(--clr-1);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-
 }
 
 section {
@@ -71,17 +68,15 @@ img {
 strong { font-weight: var(--fw-bold) }
 
 :focus {
-    outline: 3px solid var(--clr-accent-2);
+    outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
 }
-
-/* Buttons */
 
 .btn {
     display: inline-block;
     padding: .5em 2.5em;
-    background: var(--clr-accent-2);
-    color: var(--clr-1);
+    background: var(--clr-accent);
+    color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -108,20 +103,16 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
-
-
-
 .section__title {
     margin-bottom: .25em;
+    color: var(--clr-1);
 }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
-    color: var(--clr-1);
 }
 
 .section__title--intro strong {
-    color: var(--clr-1);
     display: block;
 }
 
@@ -137,7 +128,7 @@ h3 { font-size: var(--fs-h3) }
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
-.section__subtitle--work {
+.section__subtitle--portfolio {
     color: var(--clr-accent-2);
     font-weight: var(--fw-bold);
 }
@@ -145,8 +136,8 @@ h3 { font-size: var(--fs-h3) }
     margin: 0;
     font-size: var(--fs-h4);
 }
-.section__description--work{
-    color: var(--clr-2);
+.section__description--portfolio{
+    color: var(--clr-1);
     font-weight: var(--fw-bold);
 }
 
@@ -267,8 +258,7 @@ header {
     box-shadow: var(--bs);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--intro {
     display: inline-block;
 }
 
@@ -283,14 +273,14 @@ header {
             "img subtitle";
         grid-template-columns: min-content max-content;
     }
-    
+
     .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
     }    
-    
+
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -301,7 +291,6 @@ header {
         width: calc(100% + 1.5em);
     }
 }
-
 
 
 /*  What I Do section  */
@@ -380,7 +369,6 @@ header {
     }
     
     .section__subtitle--about {
-        align-self: start;
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
@@ -397,9 +385,9 @@ header {
     }
 }
 
-/* My Work */
+/* My portfolio */
 
-.my-work {
+.my-portfolio {
     background-color: var(--clr-1);
     color: var(--clr-2);
     text-align: center;    
@@ -409,25 +397,47 @@ header {
     display: grid;
     place-items:center;
     grid-template-columns: 1fr 1fr;
-    
+
     gap: 10px;
     padding: 10px;
-  }
-.portfolio__img{
+}
+.portfolio-item{
+    background: var(--clr-2);
+    border-radius: 16px;
+}
+
+.portflio-item-image{
+    padding: 10px;
+    border-radius: 32px;
     transition: 
         transform 250ms cubic-bezier(.5, 0, .5, 1),
         sopacity 250ms linear;
 }
 
-.portfolio__item:focus {
+.portfolio-item:focus {
     position: relative;
     z-index: 2;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
+.portfolio-item-button:hover{
     transform: scale(1.2);
     opacity: 1;
+}
+
+.portfolio-item-button{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent-2);
+    color: var(--clr-1);
+    border-radius: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    margin:1em;
 }
 
 
@@ -476,6 +486,9 @@ header {
     padding: .5em;
 }
 
+
+
+
 /* Individual portfolio item styles */
 
 .portfolio-item-individual {
@@ -485,7 +498,6 @@ header {
     padding: 0 2em 2em;
     margin: 0 auto;
 }
-
 .portfolio-item-individual img,
 .portfolio-item-individual p {
     
@@ -494,22 +506,21 @@ header {
     
 }
 .portfolio-item-individual p {
-    
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
     max-width: 85%;
 }
 .portfolio-item-individual img {
     max-width: 85%;
 }
-
-.portfolio-item-buttons{
+.portfolio-item-individual-buttons{
     text-align: center;
     background: var(--clr-1);
     margin-bottom: 1em;
 }
-.portfolio-item-button{
+.portfolio-item-individual-button{
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent-2);
