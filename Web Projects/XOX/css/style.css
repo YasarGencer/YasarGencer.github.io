@@ -1,0 +1,121 @@
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-1: #ff0000;
+    --clr-2: #0e0e0e; 
+    --clr-accent-1: #c080804b; 
+    --clr-accent-2: #d45c5c; 
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem; 
+}
+
+
+body{
+    background: var(--clr-2);
+    color: var(--clr-accent-2);
+    font-family: var( --ff-primary);
+    text-align: center;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+#container{
+    margin: 5% auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box{
+    display: inline-block;
+    border: 1px solid var(--clr-1);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+span{
+    position: absolute;
+    font-size: 75px;
+    font-family:  var( --ff-primary);
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    padding: 0;
+    margin: 5px;
+    margin-left: -35px;
+}
+
+.top{
+    border-top: none;
+}
+
+.bottom{
+    border-bottom: none;
+}
+
+.left{
+    border-left: none;
+}
+
+.right{
+    border-right: none;
+}
+
+.alert{
+    height: 75px;
+    width: 125px;
+    display: inline-block;
+    background: var(--clr-2);
+    position: relative;
+    z-index: 10;
+    margin-top: -50%;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px dimgray;
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+    box-sizing: content-box;
+    padding: 30px;
+    bottom: 50px;
+    top: 0;
+}
+
+button{
+    background: dimgray;
+    border-radius: 2px;
+    color: var(--clr-2);
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    background: var(--clr-accent-1);;
+}
+
+.activeBox{
+    background: var(--clr-accent-1);;
+}
+
+@keyframes larger{
+    from{
+        height: 75px;
+        width: 125px;
+    }
+
+    to{
+        height: 100px;
+        width: 250px;
+    }
+
+}
