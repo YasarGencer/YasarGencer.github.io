@@ -15,6 +15,7 @@
     
     --clr-1: #c09f80;
     --clr-2: #565656;
+    --clr-2-alpha-low: #565656af;
     --clr-accent-1: #D7CEC7;
     --clr-accent-2: #76323F;
     /*
@@ -38,6 +39,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
+        --fs-h4: 1rem;
         --fs-body: 1.125rem;
     }
 }
@@ -105,11 +107,12 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title {
     margin-bottom: .25em;
-    color: var(--clr-1);
+    color: var(--clr-2);
+    font-weight: var(--fw-bold);
 }
 
 .section__title--intro {
-    font-weight: var(--fw-reg);
+    font-weight: var(--fw-bold);
 }
 
 .section__title--intro strong {
@@ -138,8 +141,29 @@ h3 { font-size: var(--fs-h3) }
 }
 .section__description--portfolio{
     color: var(--clr-1);
+    font-size: var(--fs-h4);
     font-weight: var(--fw-bold);
 }
+
+
+/* WEBKIT */
+
+
+::-webkit-scrollbar {
+height: 8px;
+}
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 25px;
+}
+::-webkit-scrollbar-thumb {
+background: #6e93f7;
+border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #4070f4;
+}
+
 
 /* header */
 
@@ -387,23 +411,32 @@ header {
 
 /* My portfolio */
 
-.my-portfolio {
+    
+.my-portfolio { 
+    text-align: center; 
     background-color: var(--clr-1);
-    color: var(--clr-2);
-    text-align: center;    
+    color: var(--clr-2); 
 }
 
-.portfolio {
-    display: grid;
-    place-items:center;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
-    padding: 10px;
-}
-.portfolio-item{
-    background: var(--clr-2);
+.portfolio {   
+    display: flex;     
     border-radius: 16px;
+    gap: 12px; 
+    /*
+    max-width: 400px;  
+    background: #4070f4;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    */  
+    width: 100%; 
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;    
+}
+.portfolio-item{   
+    flex: 0 0 0; 
+    background: var(--clr-2-alpha-low);
+    border-radius: 16px;
+    scroll-snap-align: start; 
 }
 
 .portflio-item-image{
@@ -439,7 +472,6 @@ header {
     transition: transform 200ms ease-in-out;
     margin:1em;
 }
-
 
 /* footer */
 
